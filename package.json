@@ -1,0 +1,17 @@
+{
+  "name": "jcover",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "coverage": "jest --coverage --coverageReporters=cobertura"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "jest-junit": "^16.0.0"
+  }
+}
