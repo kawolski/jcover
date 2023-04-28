@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage --testPathPattern=__tests__/",
+    "test": "jest --coverage --testPathPattern=__tests__/ --coverageReporters=cobertura",
     "coverage": "jest --coverage --coverageReporters=cobertura"
   },
   "keywords": [],
