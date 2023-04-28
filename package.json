@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage --testPathPattern=__tests__/ --coverageReporters=cobertura",
+    "dtest": "jest --coverage --testPathPattern=__tests__/ --coverageReporters=cobertura --debug",
     "coverage": "jest --coverage --coverageReporters=cobertura"
   },
   "keywords": [],
