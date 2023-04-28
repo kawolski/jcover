@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage --testPathPattern=__tests__/ --coverageReporters=cobertura",
-    "dtest": "jest --coverage --testPathPattern=__tests__/ --coverageReporters=cobertura --debug",
-    "coverage": "jest --coverage --coverageReporters=cobertura"
+    "test": "jest --coverage --testPathPattern=__tests__/ --coverageReporter=cobertura",
+    "dtest": "jest --coverage --testPathPattern=__tests__/ --coverageReporter=cobertura --debug",
+    "coverage": "jest --coverage --coverageReporter=cobertura"
   },
   "keywords": [],
   "author": "",
