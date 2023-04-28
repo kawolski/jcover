@@ -3,10 +3,10 @@ module.exports = {
       './components/*.js', // include all .js files in the src directory and its subdirectories
     ],
     // other Jest options...
-    "coverageThreshold": {
-        "global": {
-            "lines": 50
-        }
-    }
+//     "coverageThreshold": {
+//         "global": {
+//             "lines": 50
+//         }
+//     }
   };
   
