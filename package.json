@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage --testPathPattern=__tests__/",
-    "coverage": "jest --coverage --coverageReporters=cobertura"
+    "coverage": "jest --coverage --coverageReporters=cobertura --coverageThreshold=60"
   },
   "keywords": [],
   "author": "",
