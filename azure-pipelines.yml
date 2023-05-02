@@ -44,7 +44,7 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      $AzureDevOpsPAT = "baj5swaz3wzz7lz54s3luewfnrejsqab2kgx666ycrapldmomaoa"
+      $AzureDevOpsPAT = "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"
       $OrganizationName = "prashantrawat0560"
       
       $AzureDevOpsAuthenicationHeader = @{Authorization = 'Basic ' + [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(":$($AzureDevOpsPAT)")) }
@@ -59,7 +59,7 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      $AzureDevOpsPAT = "baj5swaz3wzz7lz54s3luewfnrejsqab2kgx666ycrapldmomaoa"
+      $AzureDevOpsPAT = "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"
       $OrganizationName = "prashantrawat0560"
       
       
