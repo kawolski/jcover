@@ -43,6 +43,20 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
+      $AzureDevOpsPAT = baj5swaz3wzz7lz54s3luewfnrejsqab2kgx666ycrapldmomaoa
+      $OrganizationName = "prashantrawat0560"
+      
+      $AzureDevOpsAuthenicationHeader = @{Authorization = 'Basic ' + [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(":$($AzureDevOpsPAT)")) }
+      
+      $OrgUri = "https://dev.azure.com/$($OrganizationName)/" 
+      $FullUri = $OrgUri + '_apis/git/repositories/?api-version=6.1-preview'
+      
+      (Invoke-RestMethod -Uri $FullUri -Method get -Headers $AzureDevOpsAuthenicationHeader).value | ConvertTo-Json | Write-Host
+
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
       $AzureDevOpsPAT = "baj5swaz3wzz7lz54s3luewfnrejsqab2kgx666ycrapldmomaoa"
       $OrganizationName = "prashantrawat0560"
       $RepositoryId = $(Build.Repository.ID)
