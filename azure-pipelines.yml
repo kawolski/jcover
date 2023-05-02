@@ -43,7 +43,7 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      $AzureDevOpsPAT = baj5swaz3wzz7lz54s3luewfnrejsqab2kgx666ycrapldmomaoa
+      $AzureDevOpsPAT = "baj5swaz3wzz7lz54s3luewfnrejsqab2kgx666ycrapldmomaoa"
       $OrganizationName = "prashantrawat0560"
       $RepositoryId = $(Build.Repository.ID)
       
