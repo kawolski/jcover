@@ -23,4 +23,18 @@ steps:
 - task: PowerShell@2
   inputs:
     targetType: 'inline'
-    script: 'Write-Host $(System.PullRequest.CreatedBy.Email)'
+    script: 'Write-Host $(System.PullRequest.PullRequestId)'
+
+
+# - task: PowerShell@2
+#   inputs:
+#     targetType: 'inline'
+#     script: ''
+
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
+      $var = GET https://dev.azure.com/prashantrawat0560/DeadPool/_apis/git/repositories/$(Build.Repository.ID)/pullrequests/$(System.PullRequest.PullRequestId)?api-version=7.0
+      
+      Write-Host $var
