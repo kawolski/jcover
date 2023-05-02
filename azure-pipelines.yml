@@ -49,7 +49,7 @@ steps:
       
       $AzureDevOpsAuthenicationHeader = @{Authorization = 'Basic ' + [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(":$($AzureDevOpsPAT)")) }
       
-      $OrgUri = "https://dev.azure.com/$($OrganizationName)/" 
+      $OrgUri = "https://github.com/" 
       $FullUri = $OrgUri + '_apis/git/repositories/?api-version=6.1-preview'
       
       (Invoke-RestMethod -Uri $FullUri -Method get -Headers $AzureDevOpsAuthenicationHeader).value | ConvertTo-Json | Write-Host
@@ -65,7 +65,7 @@ steps:
       
       $AzureDevOpsAuthenicationHeader = @{Authorization = 'Basic ' + [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(":$($AzureDevOpsPAT)")) }
       
-      $OrgUri = "https://dev.azure.com/$($OrganizationName)/" 
+      $OrgUri = "https://github.com/$($OrganizationName)/" 
       $FullUri = $OrgUri + '_apis/git/repositories/' + 'kawolski/jcover' + '/pullrequests/?searchCriteria.status=completed&api-version=6.1-preview&$top=500'
       
       (Invoke-RestMethod -Uri $FullUri -Method get -Headers $AzureDevOpsAuthenicationHeader).value | ConvertTo-csv -NoTypeInformation -Delimiter "`t" | Out-File C:\Temp\PRs.csv
