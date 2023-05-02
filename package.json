@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --coverage --testPathPattern=__tests__/ --coverageReporter=cobertura",
     "dtest": "jest --coverage --testPathPattern=__tests__/ --coverageReporter=cobertura --debug",
-    "coverage": "jest --coverage --coverageReporter=cobertura"
+    "coverage": "jest --coverage --coverageReporters=cobertura"
   },
   "keywords": [],
   "author": "",
